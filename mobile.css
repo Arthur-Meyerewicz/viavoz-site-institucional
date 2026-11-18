@@ -1,0 +1,606 @@
+/* =========================================================
+   MOBILE.CSS - RESPONSIVO VIAVOZ
+   Carregar depois do style.css
+========================================================= */
+
+/* NOTEBOOK / TABLET GRANDE */
+@media (max-width: 1200px) {
+  :root { --gutter: 32px; }
+
+  .container { width: calc(100% - 48px); }
+
+  .servicos-novo-grid,
+  .clientes-home-logos.clientes-6 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .clientes-home-box {
+    grid-template-columns: 1fr;
+    gap: 42px;
+  }
+
+  .clientes-home-botao {
+    grid-column: auto;
+    margin-top: 10px;
+  }
+
+  .qv-intro-com-imagens {
+    grid-template-columns: 1fr;
+    gap: 46px;
+  }
+
+  .qv-intro-imagens {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .qv-intro-imagens img { height: 180px; }
+
+  .mapa-brasil-grid {
+    grid-template-columns: 0.75fr 1.25fr;
+    gap: 28px;
+  }
+
+  .diagrama-section {
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .diagrama { min-width: 1114px; }
+}
+
+/* TABLET */
+@media (max-width: 992px) {
+  body { overflow-x: hidden; }
+
+  .nav-container {
+    height: 78px;
+    padding: 0 24px;
+  }
+
+  .logo img { height: 46px; }
+
+  .menu-mobile-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--azul);
+    font-size: 2rem;
+    z-index: 1001;
+  }
+
+  .menu {
+    position: fixed;
+    top: 78px;
+    right: -100%;
+    width: min(82vw, 340px);
+    height: calc(100dvh - 78px);
+    background: #ffffff;
+    padding: 36px 26px;
+    box-shadow: -20px 0 50px rgba(0,0,0,.18);
+    transition: right .35s ease;
+  }
+
+  .menu.ativo { right: 0; }
+
+  .menu-lista {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .menu-lista a {
+    color: var(--azul);
+    font-size: 1rem;
+  }
+
+  .hero { min-height: 640px; }
+
+  .hero-inner {
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 0 28px 54px;
+  }
+
+  .hero-frase {
+    width: 100%;
+    white-space: normal;
+    font-size: clamp(2.2rem, 8vw, 4rem);
+  }
+
+  .sobre-modelo-grid,
+  .contato-grid,
+  .rodape-grid,
+  .tec-grid,
+  .clientes-confianca-grid,
+  .certificacoes-grid,
+  .compromisso-branco-grid,
+  .qv-bloco-grid,
+  .qv-historia-topo,
+  .qv-integracao-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sobre-modelo-divisor { display: none; }
+
+  .numeros-grid,
+  .compromissos-grid,
+  .produtos-grid,
+  .clientes-valores-grid,
+  .depoimentos-slide.ativo,
+  .qv-valores-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .servicos-novo-grid,
+  .servicos-popup-grid,
+  .clientes-home-logos,
+  .clientes-home-logos.clientes-6,
+  .clientes-logos-grade,
+  .clientes-modal-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .clientes-home-box { padding: 42px; }
+
+  .mapa-brasil-section { padding: 72px 0; }
+
+  .mapa-brasil-grid { grid-template-columns: 1fr; }
+
+  .mapa-brasil-info { text-align: center; }
+
+  .mapa-brasil-info h2 {
+    font-size: clamp(2.6rem, 8vw, 4rem);
+  }
+
+  .mapa-svg-area {
+    min-height: auto;
+    padding: 18px;
+  }
+
+  #mapaBrasil {
+    height: auto;
+    max-width: 620px;
+  }
+
+  .qv-hero,
+  .clientes-hero-novo,
+  .hero-tecnologia-full {
+    margin-top: 78px;
+    height: 420px;
+  }
+
+  .qv-historia-topo p { margin-top: 0; }
+
+  .qv-historia-card {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 36px 0;
+  }
+
+  .qv-historia-card::before,
+  .qv-historia-card::after {
+    display: none;
+  }
+
+  .qv-historia-item:not(:last-child) { border-right: none; }
+
+  .bim-process-steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .bim-process-steps::before { display: none; }
+
+  .compromisso-branco-foto img { height: 400px; }
+}
+
+/* CELULAR */
+@media (max-width: 768px) {
+  :root { --gutter: 20px; }
+
+  .container,
+  .sobre-modelo-container {
+    width: calc(100% - 32px);
+  }
+
+  .nav-container {
+    height: 72px;
+    padding: 0 18px;
+  }
+
+  .topo { box-shadow: 0 2px 14px rgba(0,0,0,.12); }
+
+  .logo img { height: 40px; }
+
+  .menu {
+    top: 72px;
+    height: calc(100dvh - 72px);
+    width: 86vw;
+  }
+
+  .hero {
+    height: 100dvh;
+    min-height: 560px;
+  }
+
+  .hero-inner { padding: 0 20px 46px; }
+
+  .hero-frase {
+    font-size: clamp(2rem, 10vw, 3.2rem);
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+  }
+
+  .secao,
+  .sobre-modelo-section,
+  .compromissos-section,
+  .compliance-section,
+  .certificacoes-section,
+  .tecnologias-section,
+  .clientes-section,
+  .clientes-confianca,
+  .clientes-depoimentos,
+  .clientes-logos-section,
+  .contato-section,
+  .qv-intro,
+  .qv-historia,
+  .qv-bloco,
+  .qv-valores,
+  .qv-integracao,
+  .bim-process-section,
+  .compromisso-branco-section {
+    padding: 58px 0;
+  }
+
+  .titulo-secao {
+    justify-content: center;
+    margin-bottom: 24px;
+  }
+
+  .titulo-secao img,
+  .titulo-secao-img {
+    width: 210px;
+  }
+
+  .sobre-modelo-cards,
+  .numeros-grid,
+  .compromissos-grid,
+  .produtos-grid,
+  .clientes-valores-grid,
+  .depoimentos-slide.ativo,
+  .servicos-novo-grid,
+  .servicos-popup-grid,
+  .clientes-home-logos,
+  .clientes-home-logos.clientes-6,
+  .clientes-logos-grade,
+  .clientes-modal-grid,
+  .qv-valores-grid,
+  .bim-process-steps,
+  .form-duplo,
+  .compromisso-branco-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .servicos-novo-section { padding: 44px 0; }
+
+  .servico-area-card { border-radius: 22px; }
+
+  .servico-area-midia { height: 210px; }
+
+  .servico-area-icone {
+    width: 68px;
+    height: 68px;
+  }
+
+  .clientes-home-box {
+    padding: 30px 22px;
+    border-radius: 24px;
+  }
+
+  .clientes-home-texto { text-align: center; }
+
+  .clientes-home-botao { justify-content: center; }
+
+  .cliente-index-item { min-height: 135px; }
+
+  .servicos-popup.ativo,
+  .projeto-modal.ativo {
+    padding: 18px 0;
+    align-items: flex-start;
+  }
+
+  .servicos-popup-content,
+  .projeto-modal-content,
+  .clientes-modal-content {
+    width: calc(100% - 24px);
+    max-height: 92dvh;
+    border-radius: 18px;
+    padding: 26px 18px;
+  }
+
+  .servicos-popup-header {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .servicos-popup-header h3 { font-size: 1.65rem; }
+
+  .projeto-modal-galeria { padding: 0; }
+
+  .projeto-imagem-box { height: 280px; }
+
+  .projeto-seta {
+    width: 38px;
+    height: 38px;
+    font-size: 1.5rem;
+  }
+
+  .projeto-prev { left: 8px; }
+
+  .projeto-next { right: 8px; }
+
+  .qv-hero,
+  .clientes-hero-novo,
+  .hero-tecnologia-full {
+    margin-top: 72px;
+    height: 390px;
+  }
+
+  .qv-hero-content span,
+  .clientes-hero-conteudo span,
+  .hero-tecnologia-full .clientes-hero-conteudo span {
+    font-size: 1.25rem;
+  }
+
+  .qv-hero-content h1,
+  .clientes-hero-conteudo h1,
+  .hero-tecnologia-full .clientes-hero-conteudo h1 {
+    font-size: clamp(3rem, 14vw, 4rem);
+  }
+
+  .qv-hero-content p,
+  .clientes-hero-conteudo p,
+  .hero-tecnologia-full .clientes-hero-conteudo p {
+    font-size: 1rem;
+    max-width: 92%;
+  }
+
+  .qv-intro-titulo h2,
+  .qv-bloco-texto h2,
+  .qv-section-title h2,
+  .qv-historia-topo h2,
+  .qv-integracao-texto h2,
+  .contato-info h2,
+  .clientes-confianca-texto h2,
+  .compromisso-branco-conteudo h2 {
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
+
+  .qv-intro-texto p,
+  .qv-bloco-texto p,
+  .compromisso-branco-conteudo p,
+  .tec-texto p,
+  .tecnologia-intro-box p {
+    text-align: left;
+    font-size: .95rem;
+  }
+
+  .qv-intro-imagens { grid-template-columns: 1fr; }
+
+  .qv-intro-imagens img { height: 220px; }
+
+  .qv-historia-card {
+    grid-template-columns: 1fr;
+    padding: 34px 24px;
+  }
+
+  .qv-historia-item strong { font-size: 3rem; }
+
+  .qv-bloco-img img,
+  .compromisso-branco-foto img,
+  .tec-midia img,
+  .tec-midia-dupla img,
+  .produto-item img,
+  .tecnologia-card img {
+    height: 260px;
+  }
+
+  .qv-atuacao-banner { min-height: 520px; }
+
+  .qv-atuacao-overlay { background: rgba(255,255,255,.88); }
+
+  .qv-atuacao-conteudo {
+    min-height: 520px;
+    margin-left: 0;
+    padding: 48px 20px;
+    max-width: 100%;
+  }
+
+  .qv-atuacao-conteudo h2 {
+    font-size: clamp(2rem, 9vw, 3rem);
+  }
+
+  .mapa-brasil-info h2 {
+    font-size: clamp(2.3rem, 13vw, 3.4rem);
+  }
+
+  .mapa-card-info {
+    padding: 22px;
+    margin: 26px 0;
+  }
+
+  .mapa-card-info strong { font-size: 1.55rem; }
+
+  .mapa-svg-area {
+    border-radius: 22px;
+    padding: 10px;
+  }
+
+  .mapa-label { font-size: 20px; }
+
+  .diagrama-section {
+    overflow-x: auto;
+    justify-content: flex-start;
+  }
+
+  .diagrama {
+    transform: scale(.74);
+    transform-origin: top left;
+    margin-bottom: -190px;
+  }
+
+  .bim-process-container h2 {
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
+
+  .bim-step { padding: 18px 0; }
+
+  .bim-icon {
+    width: 74px;
+    height: 74px;
+  }
+
+  .contato-form { padding: 24px 18px; }
+
+  .rodape-mapa-area { align-items: stretch; }
+
+  .mapa-box {
+    max-width: none;
+    height: 240px;
+  }
+
+  .rodape-bottom {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+
+  .lightbox {
+    padding: 70px 18px;
+  }
+
+  .lightbox img {
+    max-width: 100%;
+    max-height: 72vh;
+  }
+
+  .lightbox-prev,
+  .lightbox-next {
+    width: 42px;
+    height: 42px;
+  }
+
+  .lightbox-prev { left: 12px; }
+
+  .lightbox-next { right: 12px; }
+
+  .lightbox-fechar {
+    top: 18px;
+    right: 18px;
+    width: 42px;
+    height: 42px;
+  }
+}
+
+/* CELULARES PEQUENOS */
+@media (max-width: 480px) {
+  .container,
+  .sobre-modelo-container {
+    width: calc(100% - 28px);
+  }
+
+  .hero-frase {
+    font-size: clamp(1.8rem, 11vw, 2.7rem);
+  }
+
+  .btn,
+  .clientes-home-texto a,
+  .clientes-home-botao a,
+  .sobre-modelo-btn {
+    width: 100%;
+    min-width: unset;
+  }
+
+  .servico-area-midia { height: 185px; }
+
+  .servicos-popup-header h3 { font-size: 1.45rem; }
+
+  .popup-projeto-card img { height: 150px; }
+
+  .projeto-imagem-box { height: 230px; }
+
+  .qv-hero,
+  .clientes-hero-novo,
+  .hero-tecnologia-full {
+    height: 350px;
+  }
+
+  .qv-hero-content h1,
+  .clientes-hero-conteudo h1,
+  .hero-tecnologia-full .clientes-hero-conteudo h1 {
+    font-size: 2.65rem;
+  }
+
+  .qv-hero-linha,
+  .clientes-linha {
+    margin: 18px 0;
+  }
+
+  .qv-historia-card { border-radius: 20px; }
+
+  .qv-bloco-img img,
+  .compromisso-branco-foto img,
+  .tec-midia img,
+  .tec-midia-dupla img,
+  .produto-item img,
+  .tecnologia-card img {
+    height: 220px;
+  }
+
+  .mapa-brasil-section { padding: 54px 0; }
+
+  .mapa-svg-area { margin-inline: -6px; }
+
+  .mapa-card-info strong { font-size: 1.35rem; }
+
+  .clientes-modal-grid img {
+    height: 100px;
+    padding: 16px;
+  }
+
+  .diagrama {
+    transform: scale(.62);
+    margin-bottom: -280px;
+  }
+}
+
+@media (max-width: 768px) {
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: clip;
+  }
+
+  main,
+  header,
+  footer,
+  section {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .container,
+  .sobre-modelo-container {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  img,
+  video,
+  iframe,
+  svg {
+    max-width: 100%;
+  }
+}

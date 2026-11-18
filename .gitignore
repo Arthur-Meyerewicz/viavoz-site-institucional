@@ -1,0 +1,19 @@
+
+# Arquivos de mídia pesados
+/assets/
+
+# Arquivos temporários
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log
+
+# Configurações locais e credenciais
+.env
+.env.*
+!.env.example
+
+# Dependências e editores
+node_modules/
+.vscode/
+.idea/
